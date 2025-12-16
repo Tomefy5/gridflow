@@ -1,0 +1,8 @@
+[package]
+name = "gridflow-devtools"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gridflow-contracts = { path = "../gridflow-contracts" }
+tokio = { workspace = true }

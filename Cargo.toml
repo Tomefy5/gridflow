@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "crates/gridflow-contracts",
+    "crates/gridflow-scheduler",
+    "crates/gridflow-network",
+    "crates/gridflow-worker-runtime",
+    "crates/gridflow-devtools",
+]
+resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
