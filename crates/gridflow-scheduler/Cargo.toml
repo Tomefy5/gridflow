@@ -3,28 +3,20 @@ name = "gridflow-scheduler"
 version = "0.1.0"
 edition = "2021"
 
-[[bin]]
-name = "gridflow"
-path = "src/main.rs"
+[lib]
+path = "src/lib.rs"
 
 [dependencies]
 gridflow-contracts = { path = "../gridflow-contracts" }
 tokio = { workspace = true }
-serde = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
 tracing = { workspace = true }
 clap = { version = "4.4", features = ["derive"] }
 async-trait = "0.1"
+uuid = { version = "1.19.0", features = ["v4", "serde"] }
 
 [dev-dependencies]
 tokio-test = "0.4"
 criterion = "0.5"
-
-[[bench]]
-name = "task_queue_bench"
-harness = false
-
-[[bench]]
-name = "distributor_bench"
-harness = false
